@@ -1,167 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Artist's Journal</title>
-   <style>
-    header {
-	font-family: cursive;
-      	color: #96646E;
-      	text-align: center;
-      	padding: 0;
-    }
+    <link rel="stylesheet" type="text/css" href="styles.css">
+<style>
+footer {
+		background-color: #FFF5E3;
+      		color: #824911;
+      		text-align: center;
+      		padding: 5px;
+		position: absolute;
+		top:700px;
+		left: 0px;
+		right: 0px;
+		font-family: serif;
 
-    /* Navigation menu styling */
-    nav ul {
-     	list-style-type: none;
-      	padding: 0;
-    }
-
-    main {
-	text-align: left;
-	color: #4B2D33;
-	padding: 0;
-    }
-
-    button {
-	text-align: center;
-	font-family: cursive;
-	font-size: 20px;
-	padding: 5px;
-	background-color: #F8E8EE;
-	cursor: pointer;
 	}
-
-    input {
-	font-size: 20px;
-	font-family: cursive;
-	padding: 5px;
-	background-color: #F8E8EE;
- 	cursor: pointer;
-    }
-
-    h1 {
-	font-size: 30px;
-	font-family-cursive;
-    }
-
-    body {
-	background-image: url("final.gif");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
-    }
-
-    nav ul li {
-      	display: inline;
-      	margin-right: 20px;
-    }
-
-    /* Link styling */
-    a {
-      	color: black;
-      	text-decoration: none;
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    p {
-	font-size: 20px;
-	font-family: cursive;
-    }
-
-    /* Footer styling */
-    footer {
-	background-color: #F8E8EE;
-      	color: black;
-      	text-align: center;
-      	padding: 5px;
-	position: relative;
-	top: 50px;
-	font-family: cursive;
-    }
-
 </style>
+	
 </head>
 <body>
+    <title> Artist's Journal </title>
+		<div id="header">
+			<a href="html.html"><img id="logo" src="logo.png" width="60px" height="60px"></a>
+		<h1 id="header-name"> Artist's Journal </h1>
+		</div>
 
- <!-- Header -->
- <header>
-    <h1>FAQs</h1>
-    <nav>
-      <ul>
-        <li><a href="homepage.html">Home</a></li>
-        <li><a href="#">Page3</a></li>
-	<li><a href="#">Page4</a></li>
-	<li><a href="#">Page5</a></li>
-      </ul>
-    </nav>
- </header>
+		<div id="menu-background">
+			<div id="menu">
+				<div class="menu-home"> <a href="html.html" >Home</a> </div>
+				<div class="menu-faqs"> <a href="page2.html" >FAQs</a> </div>
+				<div class="menu-tutor"> <a href="page3.html">Tutorial</a> </div>
+				<div class="menu-product"> <a href="page4.html">Products</a> </div>
+				<div class="menu-contact"> <a href="page5.html">Community</a> </div>
+				<div class="menu-chat"> <a href="page6.html"><img src="chat.png" width="25px" height="20px"></a></div>
+		</div>
+	
+		<div id="main2">
+    				<h1 id="center-text2">FAQs</h1>
+			<div id="search">
+    				<form action="/search" method="get">
+    				<input type="text" name="query" placeholder="Search...">
+    				<button type="submit">Search</button>
+				</form>
+			</div>
+			<div id="texts">
 
- <!-- Main content -->
- <main>
-  	<form action="/search" method="get">
-    		<input type="text" name="query" placeholder="Search...">
-    		<button type="submit">Search</button>
-	</form>
-	<h1> Most Asked Questions </h1>
+				<h2 class="reveal" onclick="revealAnswer(this)">What's the main idea of artwork?</h2>
+				<p class="answer">One modern definition is “something that is created with imagination and skill and that is beautiful.” Often, art is defined by its origin in the human mind. Imagination plays a key role in making any piece of art. Some people think of art as what happens when your creativity takes solid form.</p>
 
-  <div id="faq">
-        <h2>What's the main idea of artwork?</h2>
-        <p class="hidden">One modern definition is “something that is created with imagination and skill and that is beautiful.” Often, art is defined by its origin in the human mind. Imagination plays a key role in making any piece of art. Some people think of art as what happens when your creativity takes solid form.</p>
-        <button class="arrow" onclick="revealAnswer(this)">▼</button>
-    </div>
-  <script>
-        function revealAnswer(button) {
-            var answer = button.parentElement.querySelector(".hidden");
-            answer.classList.toggle("hidden");
-            button.innerHTML = button.innerHTML === "▼" ? "▲" : "▼";
-        }
-    </script>
+				<h2 class="reveal" onclick="revealAnswer(this)">What is the importance of art?</h2>
+				<p class="answer">Art is not just an expression of emotion but also a medium for communicating ideas. It can act as therapeutic relief, a conduit for self-expression, or simply a way to appreciate life's beauty. Through art, we can chronicle history, embody societal values, and comment on political or social events.</p>
 
-  <div id="faq">
-        <h2>What is the importance of art?</h2>
-        <p class="hidden">Art is not just an expression of emotion but also a medium for communicating ideas. It can act as therapeutic relief, a conduit for self-expression, or simply a way to appreciate life's beauty. Through art, we can chronicle history, embody societal values, and comment on political or social events.</p>
-        <button class="arrow" onclick="revealAnswer(this)">▼</button>
-    </div>
-  <script>
-        function revealAnswer(button) {
-            var answer = button.parentElement.querySelector(".hidden");
-            answer.classList.toggle("hidden");
-            button.innerHTML = button.innerHTML === "▼" ? "▲" : "▼";
-        }
-    </script>
+				<h2 class="reveal" onclick="revealAnswer(this)">What is the importance of art to students?</h2>
+				<p class="answer">Art instruction helps children with the development of motor skills, language skills, social skills, decision-making, risk-taking, and inventiveness. Visual arts teach learners about color, layout, perspective, and balance: all techniques that are necessary in presentations (visual, digital) of academic work.</p>
+				
 
-  <div id="faq">
-        <h2>What is the importance of art to students?</h2>
-        <p class="hidden">Art instruction helps children with the development of motor skills, language skills, social skills, decision-making, risk-taking, and inventiveness. Visual arts teach learners about color, layout, perspective, and balance: all techniques that are necessary in presentations (visual, digital) of academic work.</p>
-        <button class="arrow" onclick="revealAnswer(this)">▼</button>
-    </div>
-  <script>
-        function revealAnswer(button) {
-            var answer = button.parentElement.querySelector(".hidden");
-            answer.classList.toggle("hidden");
-            button.innerHTML = button.innerHTML === "▼" ? "▲" : "▼";
-        }
-    </script>
+		</div>
+		</div>
 
-</main>
+		<footer>
+ 			<nav>
+      				<ul>
+       				<li><a href="#">Privacy Policy</a></li>
+        			<li><a href="#">Terms and Services</a></li>
+				<li><a href="#">Inquiries</a></li>
+				<li><a href="#">Feedback</a></li>
+      				</ul>
+				<div class="sprite1">
+				<a href="https://www.facebook.com/profile.php?id=61555228048408"> <img src="https://www.facebook.com/path/to/icon.png"</a>
+				</div>
+				<div class="sprite2">
+				<a href="https://www.instagram.com/_artizjoinwebs_/"> <img src="https://www.instagram.com/path/to/icon.png"</a>
+				</div>
+    			</nav>
+ 		</footer>
 
- <!-- Footer -->
- <footer>
- <nav>
-      <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms and Services</a></li>
-	<li><a href="#">Inquiries</a></li>
-	<li><a href="#">Feedback</a></li>
-      </ul>
-    </nav>
-	<p 1>Answers are taken from websites.</p>
- </footer>
+<script>
+		function revealAnswer(element) {
+ 		var answer = element.nextElementSibling;
+ 		if (answer.style.display === "block") {
+    			answer.style.display = "none";
+ 		} else {
+    			answer.style.display = "block";
+ 			}
+		}
+	</script>
+
 </body>
 </html>
